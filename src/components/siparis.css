@@ -1,0 +1,14 @@
+.siparis-page{
+background-color: #CE2829 ;
+margin: 0;
+padding: 0;
+height: 85vh;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center ;
+background-size: cover;
+background-position: center;
+color: white;
+ 
+}

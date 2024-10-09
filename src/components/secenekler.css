@@ -1,0 +1,18 @@
+.siparis-container{
+ display: flex;
+ flex-direction: column;
+ margin: 20px 300px 20px 300px;
+ 
+}
+.form-group {
+    display: flex;
+    flex-direction: row; /* Elemanları yan yana hizalar */
+    gap: 10px; /* Elemanlar arasındaki boşluğu ayarlamak için */
+}
+.malzemos{
+    display: flex;
+    flex-direction: column;
+}.artıButon{
+    width: 20px;
+   background-color: #FDC913;
+}

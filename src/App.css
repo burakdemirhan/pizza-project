@@ -1,0 +1,12 @@
+ body{
+ 
+ background-color: white;
+  z-index: 0;
+  display: flex;
+  text-align: center;
+ text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 5vw;
+  margin: 2px 300px;
+}

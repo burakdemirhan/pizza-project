@@ -1,0 +1,31 @@
+.footer-container{
+background-color: #1A1A1A;
+color: white;
+grid-template-columns: repeat(3, 1fr);
+display: grid;
+font-family: Barlow;
+
+   
+}
+.son{
+    border: solid white;
+   width: 300%;
+   border: #1A1A1A;
+    
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+h1{
+    font-family: Londrina Solid;
+}
+
+.img-first, .img-second {
+    display: flex;
+    gap: 50px;
+    margin: 20px;
+}

@@ -1,5 +1,6 @@
 
 import Header from "./components/header"
+import Footer from "./components/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Anasayfa from "./components/Anasayfa";
 import Secenekler from "./components/Secenekler";
@@ -18,6 +19,8 @@ function App() {
   const [pizzaKalinlik, setPizzaKalinlik] = useState("")
   const [pizzaBoyut, setPizzaBoyut] = useState("")
   const [pizzaMalzeme, setPizzaMalzeme] = useState([])
+  const [count, setCount] = useState(0)
+  const [error , setError] = useState("")
 
   
   return (
@@ -36,13 +39,18 @@ function App() {
      pizzaBoyut = {pizzaBoyut}
      setPizzaBoyut = {setPizzaBoyut}
      pizzaMalzeme = {pizzaMalzeme}
-     setPizzaMalzeme = {setPizzaMalzeme}/>
+     setPizzaMalzeme = {setPizzaMalzeme}
+     count = {count}
+     setCount = {setCount}
+     error = {error}
+     setError = {setError}
+     />
   </Route>
   <Route exact path = "/siparis">
     <Siparis/>
   </Route>
   </Switch>
-
+<Footer/>
 </Route>
   
   )

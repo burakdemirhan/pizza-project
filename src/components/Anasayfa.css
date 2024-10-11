@@ -2,7 +2,7 @@
 background-image: url("/Assets/Iteration-1-assets/home-banner.png");
 margin: 0;
 padding: 0;
-height: 85vh;
+height: 78vh;
 display: flex;
 justify-content: center;
 flex-direction: column;
@@ -17,11 +17,196 @@ color: white;
   padding: 15px 20px;
   font-size: 18px;
   border: 3px none;
-  margin-top: -30px;
+
 }
 .kod-pizza{
   font-family: Roboto Condensed;
   font-size: 3rem;
   text-align: center;
   margin-top: -300px;
+  
 }
+.all-page{
+  background-color: #FAF7F2;
+
+}
+.header-icon {
+ display: flex;
+ gap: 20px;
+ justify-content: center;
+ margin: 10px;
+ text-align: center;
+ align-items: center;
+ flex-wrap: wrap;
+ font-family: Barlow;
+ 
+}
+.header-icon img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.özel-lezzetus{
+  background-image: url("/src/assets/kart-1.png");
+  background-repeat: no-repeat;
+  color: white;
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+ background-size: cover;
+ padding: 20px;  
+ margin: 50px;                /* İçerik ile kenarlar arasında boşluk bırakır. */
+  margin-right: 8px; 
+  font-size: 1rem;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.özel-lezzetus h1{
+ 
+  font-family: Quattrocento;
+}
+.hachatlon{
+  background-image: url("/src/assets/kart-2.png");
+  background-repeat: no-repeat;
+  color: white;
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  background-size: cover;
+  margin-bottom: 10px;
+  padding: 30px;  
+  display: flex;     
+  flex-direction: column; 
+  justify-content: center;  
+  gap: 10px;        /* İçerik ile kenarlar arasında boşluk bırakır. */
+   
+
+}.cook{
+  background-image: url("/src/assets/kart-3.png");
+  background-repeat: no-repeat;
+  color: white;
+  width: 500px;
+  height: 200px;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+
+.tüm-menü{
+  display: flex;
+ align-items: center;
+  justify-content: center;   
+  background-color: #FAF7F2;
+  gap: 10px;
+  align-content: center;
+ 
+  
+}
+.sag-taraf{
+ display: flex;
+ flex-direction: column;
+}
+.ilk-button{
+background-color: white;
+color: #CE2829;
+ border:  none;
+ border-radius: 20px;
+ width: 150px;
+ height: 50px;
+  
+}
+.ikinci-buton{
+background-color: white;
+color: #CE2829;
+ border:  none;
+ border-radius: 20px;
+ width: 150px;
+ height: 50px;
+ margin: 20px;
+ 
+
+}
+.ücüncü-buton{
+  background-color: white;
+  color: #CE2829;
+ border:  none;
+ border-radius: 20px;
+ width: 150px;
+ height: 50px;
+
+
+}
+.paket{
+  color: #CE2829;
+  font-family: Satisfy;
+  text-align: center;
+
+}
+
+.acıktıran{
+  text-align: center;
+  font-family: Barlow;
+ 
+}
+.menü-bar-header{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+
+
+}
+
+
+.menü-bar{
+  background-color: white;
+  border:  1px solid white;
+  border-radius:20px;
+  transition: transform 0.2s ease;
+  width: 150px;   /* Butonun genişliği */
+  height: 50px;
+  cursor: pointer;
+}
+.menü-bar img{
+  width: 30px;
+  height: 30px;
+
+}
+.menü-bar-header :hover{
+  background-color: #292929;
+}
+.cards{
+ display: flex;
+ justify-content: center;
+ gap: 20px;
+ align-items: center;
+ padding: 40px;
+
+}
+.card-1{
+  background-color: white
+}
+.card-2{
+  background-color: white
+}
+.card-3{
+  background-color: white
+}
+.food-inc{
+  display: flex;
+  justify-content: space-between;
+  padding: 4px;
+  margin: 8px;
+}
+.food-inc p {
+  color: #1B1B1BB2;
+}
+.first-word{
+  color: #CE2829;
+}
+  
+
+

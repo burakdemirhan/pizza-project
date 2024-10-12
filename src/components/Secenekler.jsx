@@ -1,11 +1,11 @@
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
+import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min"
 import "./secenekler.css"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Siparis from "./Siparis"
 import { Button, Col, Container, Form, FormGroup, Input, Label, Row } from "reactstrap"
 export default function Secenekler(props) {
-    const {pizzaKalinlik, setPizzaKalinlik, pizzaBoyut, setPizzaBoyut, pizzaMalzeme, setPizzaMalzeme, count, setCount, error, setError
-    } = props;
+    const {pizzaKalinlik, setPizzaKalinlik, pizzaBoyut, setPizzaBoyut, pizzaMalzeme, setPizzaMalzeme, count, setCount, error, setError,
+    secili, setSecili} = props;
    
     
       const history = useHistory()
@@ -20,11 +20,15 @@ export default function Secenekler(props) {
    
   }
   const handlePizaBoyutChange = (event) => {
+    if(pizzaBoyut === null){
+      setError("Lütfen pizza için boyut seçin")
+    }
     event.preventDefault()
     setPizzaBoyut(event.target.value)
   }
   const handlePizzaKalinlikChange = (event) => {
     setPizzaKalinlik(event.target.value)
+   
    
   }
   const handleMalzemeChange = (event , index) => {
@@ -39,6 +43,14 @@ export default function Secenekler(props) {
       setError("En fazla 10 ürün seçebilirsiniz")
     }
   }
+
+  const handleLinkClick  = (page) => {
+ 
+ setSecili(page)
+  }
+  useEffect(() => {
+    setSecili("/secenekler")
+  }, [])
   const malzemler = [
     "Pepperoni",
     "Tavuk Izgara",
@@ -70,18 +82,50 @@ export default function Secenekler(props) {
   const toplamTutar = pizzaFiyatı + pizzaMalzeme.length * malzemeFiyatı
 
     return (
-        <div className="siparis-form">
+      <form>
+        <div className="back-wrapper">
+       
+          <div className="siparis-alt">
+            <img src="/src/assets/form-banner.png" />
+         <nav className="nav-links">
+          <Link 
+          to = "/" 
+          className = {secili === "/" ? "active" : "notActive"}
+          onClick = { () => handleLinkClick} 
+      
+          >
+            Anasayfa
+          
+          </Link> 
+          <span>-</span>
+          <Link
+          to = "/secenekler"
+          className = {secili === "/secenekler" ? "active" : ""}
+          onClick =  { ()=> handleLinkClick} >Sipariş Oluştur</Link>
+         </nav>
+           
+            
+            <div>
             <h1>Position Absolute Acı Pizza</h1>
+            </div>
             <div className="pizza-info">
+           
             <h3>{pizzaFiyatı}₺</h3>
             <p>4.9</p>
             <p>(200)</p>
             </div>
-            <div>
+            <div className="main-p">
             <p>Frontent Dev olarak hala position:absolute kullanıyorsan bu çok acı pizza tam sana göre. Pizza, domates, peynir ve genellikle çeşitli diğer malzemelerle kaplanmış, daha sonra geleneksel olarak odun ateşinde bir fırında yüksek sıcaklıkta pişirilen, genellikle yuvarlak, düzleştirilmiş mayalı buğday bazlı hamurdan oluşan İtalyan kökenli lezzetli bir yemektir. . Küçük bir pizzaya bazen pizzetta denir.</p>
         </div>
+        </div>
+      </div>
+        
+    
+
+        <div className="siparis-form">
         <FormGroup className="first-secim">
           <div>
+            
         <Label tag={"h5"}>Boyut Seç*</Label> <br />
         <Label htmlFor="kucuk">
         <Input type="radio"  id= "kucuk"  value= "Küçük" name="Pizza Boyutu" onChange={handlePizaBoyutChange} checked = {pizzaBoyut === "Küçük"} /> Küçük
@@ -151,9 +195,11 @@ export default function Secenekler(props) {
         </Row>
         
       </Container>
- 
+       </div>
+       </form>
 
-        </div>
+     
+ 
    
     
 

@@ -1,7 +1,8 @@
 
 import "./Anasayfa.css"
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
-export default function Anasayfa() {
+export default function Anasayfa(props) {
+  const {secili , setSecili} = props;
     const history = useHistory()
     const HandleClickButton = () => {
         history.push("/secenekler")

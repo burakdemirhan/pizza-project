@@ -6,7 +6,7 @@ import Anasayfa from "./components/Anasayfa";
 import Secenekler from "./components/Secenekler";
 import Siparis from "./components/Siparis";
 import "./index.css"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import {
   Switch,
   Route,
@@ -17,10 +17,12 @@ import {
 function App() {
 
   const [pizzaKalinlik, setPizzaKalinlik] = useState("")
-  const [pizzaBoyut, setPizzaBoyut] = useState("")
+  const [pizzaBoyut, setPizzaBoyut] = useState(null)
   const [pizzaMalzeme, setPizzaMalzeme] = useState([])
   const [count, setCount] = useState(0)
   const [error , setError] = useState("")
+ const [secili, setSecili] = useState("/")
+
 
   
   return (
@@ -29,6 +31,9 @@ function App() {
   <Switch>
     <Route exact path = "/">
     <Anasayfa
+    secili = {secili}
+    setSecili = {setSecili}
+  
    
     />
   </Route>
@@ -44,6 +49,11 @@ function App() {
      setCount = {setCount}
      error = {error}
      setError = {setError}
+     secili = {secili}
+     setSecili = {setSecili}
+   
+     
+
      />
   </Route>
   <Route exact path = "/siparis">

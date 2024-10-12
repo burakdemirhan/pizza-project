@@ -1,16 +1,54 @@
-.siparis-form{
-    font-family: Barlow;
+.back-wrapper {
+    background-color: #FAF7F2; /* Arka plan rengini buraya ver */
     display: flex;
     flex-direction: column;
-     margin: 20px 400px 20px 400px;
      
-   
 }
+
+.siparis-form{
+ font-family: Barlow;
+display: flex;
+flex-direction: column;
+ margin: 20px 400px ;    
+ background-color: white;
+}
+
+.siparis-alt{
+display: flex;
+flex-direction: column;
+gap: 50px;
+margin: 20px 400px ;  
+background-color: #FAF7F2;
+padding-bottom: 10px;
+}
+
+.siparis-alt img{
+margin:-20px;
+padding: 0;
+padding: 0;
+max-width: 100%; /* Görselin genişliği tam olacak */
+}
+.main-p{
+  color:   #5F5F5F;
+}
+
 .pizza-info{
     display: flex;
     justify-content: space-between;
 }
+.pizza-info p{
+ color:   #5F5F5F;
 
+}
+.nav-links a{
+text-decoration:none;
+color:#5F5F5F;
+
+
+}
+.nav-links a.active {
+    color: #CE2829;
+    }
 .second-secim{
 display: flex;
 align-content: center;

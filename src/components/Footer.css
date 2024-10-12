@@ -46,12 +46,13 @@ border: solid white;
 display: flex;
 border: #1A1A1A;
 flex-direction: row;
-justify-content: space-between;
+justify-content: center;
 align-items: center;
+gap: 600px;
 }
 .son i {
-    padding-right: 20px;
-    color: #1DA1F2;
+color: #1DA1F2;
+  
 }
 
 .footer-tite{
@@ -61,5 +62,6 @@ align-items: center;
 .img-first, .img-second {
     display: flex;
     gap: 30px;
+
    
 }

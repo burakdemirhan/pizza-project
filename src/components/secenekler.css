@@ -122,3 +122,12 @@ border-radius: 4px;
     width: 50%;
     color: black
 }
+.boy {
+ display: flex;
+ flex-direction: column;
+ gap: 4px;
+
+}
+.error-message{
+    color: #CE2829;
+}

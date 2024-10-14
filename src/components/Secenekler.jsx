@@ -1,7 +1,8 @@
 import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import "./secenekler.css";
 import React, { useEffect, useState } from "react";
-import Siparis from "./Siparis";
+import Siparis from "./Siparis.jsx";
+
 import {
   Button,
   Col,
@@ -12,6 +13,7 @@ import {
   Label,
   Row,
 } from "reactstrap";
+import axios from "axios";
 export default function Secenekler(props) {
   const {
     pizzaKalinlik,
@@ -32,16 +34,35 @@ export default function Secenekler(props) {
     setFormData,
     siparisNotu,
     setSiparisNotu,
+    malzemeSec,
+    setMalzemeSec,
+    toplamTutar,
+    setToplamTutar,
+    ınputValue,
+    setInputValue,
   } = props;
 
   const history = useHistory();
   const [malzemeError, setMalzemeError] = useState();
   const [boyutError, setBoyutError] = useState();
   const [kalınlıkError, setKalınlıkError] = useState();
+  const [isimError, setIsımError] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setFormData({ ...formData, [event.target.name]: event.target.value });
+
+    // Make a request for a user with a given ID
+    axios
+      .post("https://reqres.in/api/pizza")
+      .then(function (response) {
+        // handle success
+        console.log(response);
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      });
   };
 
   const handelSiparisClick = (event) => {
@@ -110,13 +131,13 @@ export default function Secenekler(props) {
 
   const handleArttırClick = () => {
     setCount((event) => event + 1);
-    setPizzaFiyatı((prevFiyat) => prevFiyat + 85);
+    setToplamTutar((prevFiyat) => prevFiyat + 85);
   };
   const handleAzaltClick = () => {
     if (count > 0) {
       setCount((prevCount) => prevCount - 1);
     }
-    setPizzaFiyatı((prevFiyat) => prevFiyat - 85);
+    setToplamTutar((prevFiyat) => prevFiyat - 85);
   };
 
   useEffect(() => {
@@ -144,8 +165,23 @@ export default function Secenekler(props) {
     }
   }, [pizzaKalinlik]);
 
-  const malzemeFiyatı = 5;
-  const toplamTutar = pizzaFiyatı + pizzaMalzeme.length * malzemeFiyatı;
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+    if (event.target.value.length < 3) {
+      setIsımError("Lütfen en az üç karakter giriniz");
+    } else {
+      setIsımError("");
+    }
+  };
+  const isFormValid = () => {
+    return (
+      pizzaMalzeme.length > 4 &&
+      pizzaMalzeme.length > 10 &&
+      ınputValue.length > 3 &&
+      pizzaBoyut &&
+      pizzaKalinlik
+    );
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -214,7 +250,7 @@ export default function Secenekler(props) {
             <Label tag={"h5"}> Kalınlık Seç*</Label> <br />
             <Input
               type="select"
-              value={formData.pizzaKalinlik}
+              value={pizzaKalinlik}
               onChange={handlePizzaKalinlikChange}
             >
               <option value="" disabled>
@@ -250,6 +286,12 @@ export default function Secenekler(props) {
             </Label>
           ))}
         </FormGroup>
+        <FormGroup>
+          <Label tag={"h5"}>İsim Giriniz</Label>
+          <Label htmlFor="isim"></Label>
+          <Input onChange={handleInputChange} />
+          {isimError && <div className="error-message">{isimError}</div>}
+        </FormGroup>
 
         <FormGroup>
           <Label tag={"h5"}>Sipariş Notu</Label>
@@ -282,11 +324,15 @@ export default function Secenekler(props) {
             <Col sm="12">
               <div className="total">
                 <h4>Sipariş Toplamı</h4>
-                <p>Seçimler: {pizzaMalzeme.length * malzemeFiyatı}₺</p>
+                <p>Seçimler: {pizzaMalzeme.length * malzemeSec}₺</p>
                 <p className="toplam-tutar">
-                  Toplam: {toplamTutar.toFixed(2)}₺
+                  Toplam: {toplamTutar + pizzaMalzeme.length * malzemeSec}₺
                 </p>
-                <Button className="siparis-ver" onClick={handelSiparisClick}>
+                <Button
+                  className="siparis-ver"
+                  onClick={handelSiparisClick}
+                  disabled={isFormValid()}
+                >
                   Sipariş Ver
                 </Button>
               </div>

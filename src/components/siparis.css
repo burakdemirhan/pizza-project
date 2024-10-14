@@ -2,7 +2,7 @@
 background-color: #CE2829 ;
 margin: 0;
 padding: 0;
-height: 85vh;
+height: 100vh;
 display: flex;
 justify-content: center;
 flex-direction: column;
@@ -10,5 +10,17 @@ align-items: center ;
 background-size: cover;
 background-position: center;
 color: white;
+}
+.yol{
+    color: #FDC913;
+    font-family: Satisfy;
+}
+
+.tebrik {
+    font-family: Roboto ;
+}
+.line {
+    border-bottom: 2px solid black; 
+    margin: 20px 0;
 }
 

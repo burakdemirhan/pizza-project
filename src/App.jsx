@@ -7,6 +7,7 @@ import Siparis from "./components/Siparis";
 import "./index.css";
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
+import axios from "axios";
 
 const initialFormData = {
   pizzaBoyut: "Orta",
@@ -25,6 +26,9 @@ function App() {
   const [secili, setSecili] = useState("/");
   const [pizzaFiyatı, setPizzaFiyatı] = useState(0);
   const [siparisNotu, setSiparisNotu] = useState();
+  const [malzemeSec, setMalzemeSec] = useState(5);
+  const [toplamTutar, setToplamTutar] = useState(0);
+  const [inputValue, setInputValue] = useState("");
 
   return (
     <Route>
@@ -53,10 +57,22 @@ function App() {
             setFormData={setFormData}
             siparisNotu={siparisNotu}
             setSiparisNotu={setSiparisNotu}
+            malzemeSec={malzemeSec}
+            setMalzemeSec={setMalzemeSec}
+            toplamTutar={toplamTutar}
+            setToplamTutar={setToplamTutar}
+            inputValue={inputValue}
+            setInputValue={setInputValue}
           />
         </Route>
         <Route exact path="/siparis">
-          <Siparis formData={formData} setFormData={setFormData} />
+          <Siparis
+            pizzaBoyut={pizzaBoyut}
+            pizzaKalinlik={pizzaKalinlik}
+            pizzaMalzeme={pizzaMalzeme}
+            malzemeSec={malzemeSec}
+            toplamTutar={toplamTutar}
+          />
         </Route>
       </Switch>
       <Footer />

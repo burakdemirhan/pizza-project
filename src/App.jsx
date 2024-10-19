@@ -8,6 +8,9 @@ import "./index.css";
 import React, { useEffect, useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 const initialFormData = {
   pizzaBoyut: "Orta",
@@ -32,6 +35,7 @@ function App() {
 
   return (
     <Route>
+      <ToastContainer />
       <Header />
       <Switch>
         <Route exact path="/">

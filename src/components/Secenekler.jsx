@@ -14,6 +14,7 @@ import {
   Row,
 } from "reactstrap";
 import axios from "axios";
+import { toast } from "react-toastify";
 export default function Secenekler(props) {
   const {
     pizzaKalinlik,
@@ -76,6 +77,9 @@ export default function Secenekler(props) {
       setMalzemeError("");
       setBoyutError("");
       history.push("/siparis");
+      toast.success("Siparişiniz Alındı", {
+        theme: "colored",
+      });
     }
   };
   const handlePizaBoyutChange = (event, index) => {

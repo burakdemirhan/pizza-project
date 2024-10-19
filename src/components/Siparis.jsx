@@ -10,18 +10,25 @@ export default function Siparis(props) {
         <br />
         SİPARİŞ ALINDI
       </h1>
-      <div class="line">-</div>
 
-      <div>
-        <h2>Position Absolute Acı Pizza</h2>
+      <hr />
+
+      <h2>Position Absolute Acı Pizza</h2>
+      <div className="inc">
         <p> Boyut: {pizzaBoyut}</p>
         <p>Hamur: {pizzaKalinlik} </p>
         <p>Ek Malzemeler: {pizzaMalzeme.join(", ")} </p>
       </div>
-      <div>
-        <h1>Sipariş Toplamı</h1>
-        <p>Secimler: {pizzaMalzeme.length * malzemeSec}₺ </p>
-        <p>Toplam: {toplamTutar + pizzaMalzeme.length * malzemeSec}</p>
+      <div className="toplamm">
+        <p>Sipariş Toplamı</p>
+        <p>
+          Secimler: <span class="killa"></span>{" "}
+          {pizzaMalzeme.length * malzemeSec}₺{" "}
+        </p>
+        <p>
+          Toplam: <span class="ceza"></span>{" "}
+          {toplamTutar + pizzaMalzeme.length * malzemeSec}₺
+        </p>
       </div>
     </div>
   );

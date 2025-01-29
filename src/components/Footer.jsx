@@ -5,9 +5,9 @@ export default function Footer() {
     <footer>
       <div className="footer-content">
         <div className="footer-first">
-          <h1 className="footer-title">
+          <h3 className="footer-title">
             Teknolojik <br /> Yemekler
-          </h1>
+          </h3>
           <div className="footer-item">
             <img src="/assets/icon-1.png" alt="adres" />
             <p>
@@ -35,12 +35,15 @@ export default function Footer() {
           <p>Position Absolute Acı Burger</p>
         </div>
         <div className="footer-third">
-          <p>Instagram</p>
+          <h3 className="inst">Instagram</h3>
           <div className="img-first">
             <img src="/assets/li-0.png" />
+
             <img src="/assets/li-1.png" />
+
             <img src="/assets/li-2.png" />
           </div>
+          <span className="linee" />
           <div className="img-second">
             <img src="/assets/li-3.png" />
             <img src="/assets/li-4.png" />

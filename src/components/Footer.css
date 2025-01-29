@@ -6,6 +6,10 @@ font-size: 1rem;
 margin: 0;
 padding: 0; 
 }
+.footer-title{
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
 
 .footer-content{
     grid-template-columns: repeat(3, 1fr);
@@ -33,12 +37,17 @@ padding: 20px;
 .footer-second{
 display: flex;
 flex-direction: column;
-margin-top: 70px;
+margin-top: 50px;
 
 }
 .footer-third{
-    display: flex;
-    flex-direction: column;
+   display: flex;
+   flex-direction: column;
+   width: 10rem;
+   border: #1A1A1A;
+   border-radius: 30px;
+ 
+   
     
 }
 .son{
@@ -62,6 +71,16 @@ color: #1DA1F2;
 .img-first, .img-second {
     display: flex;
     gap: 30px;
-
    
 }
+
+.linee{
+    margin-bottom: 10px;
+}
+.img-first{
+    margin-top: 30px;
+}
+.inst{
+    margin-top: 30px;
+}
+

@@ -116,7 +116,11 @@ color: #CE2829;
  border-radius: 20px;
  width: 150px;
  height: 50px;
-  
+}
+.ilk-button:hover{
+  background-color: white; 
+  color: #CE2829; 
+  border: 2px solid  #FDC913;
 }
 .ikinci-buton{
 background-color: white;
@@ -125,10 +129,13 @@ color: #CE2829;
  border-radius: 20px;
  width: 150px;
  height: 50px;
- margin: 20px;
- 
-
 }
+.ikinci-buton:hover{
+  background-color: white; 
+  color: #CE2829; 
+  border: 2px solid  #FDC913;
+}
+
 .ücüncü-buton{
   background-color: white;
   color: #CE2829;
@@ -136,13 +143,19 @@ color: #CE2829;
  border-radius: 20px;
  width: 150px;
  height: 50px;
-
-
+ margin-left: 25px;
+ margin-top: 10px;
+}
+.ücüncü-buton:hover{
+  background-color: white; 
+  color: #CE2829; 
+  border: 2px solid  #FDC913;
 }
 .paket{
   color: #CE2829;
   font-family: Satisfy;
   text-align: center;
+
 
 }
 
@@ -176,7 +189,8 @@ color: #CE2829;
 
 }
 .menü-bar-header :hover{
-  background-color: #292929;
+  background-color: white;
+  border: 2px solid  #FDC913
 }
 .cards{
  display: flex;
@@ -184,29 +198,43 @@ color: #CE2829;
  gap: 20px;
  align-items: center;
  padding: 40px;
+ 
 
 }
 .card-1{
-  background-color: white
+  background-color: white;
+  border-radius: 20px;
+  width: 33.3%;
 }
 .card-2{
-  background-color: white
+  background-color: white;
+  width: 33.3%;
+  border-radius: 20px;
 }
 .card-3{
-  background-color: white
+  background-color: white;
+  width: 33.3%;
+  border-radius: 20px;
 }
 .food-inc{
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 4px;
-  margin: 8px;
+  margin: 16px;
 }
 .food-inc p {
   color: #1B1B1BB2;
+   
 }
 .first-word{
   color: #CE2829;
 }
   
-
-
+.card-title{
+  margin-left: 13px;
+  
+}
+.terminal{
+  margin-left: 50px ;
+  margin-top: 10px;
+}

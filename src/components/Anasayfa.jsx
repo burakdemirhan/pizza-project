@@ -55,7 +55,7 @@ export default function Anasayfa(props) {
             </div>
 
             <div className="cook">
-              <h2>
+              <h2 className="card-text">
                 {" "}
                 <span class="first-word"> Çoooook hızlı</span> <br /> npm gibi
                 kurye{" "}
@@ -97,8 +97,8 @@ export default function Anasayfa(props) {
 
         <div className="cards">
           <div className="card-1">
-            <img src="/assets/food-1.png" />
-            <h5>Terminal Pizza</h5>
+            <img className="terminal" src="/assets/food-1.png" />
+            <h5 className="card-title">Terminal Pizza</h5>
             <div className="food-inc">
               <p>4.9</p>
               <p>(200)</p>
@@ -107,8 +107,8 @@ export default function Anasayfa(props) {
           </div>
 
           <div className="card-2">
-            <img src="/assets/food-2.png" />
-            <h5>Position Absolute Acı Pizza</h5>
+            <img className="terminal" src="/assets/food-2.png" />
+            <h5 className="card-title">Position Absolute Acı Pizza</h5>
             <div className="food-inc">
               <p>4.9</p>
               <p>(200)</p>
@@ -116,8 +116,8 @@ export default function Anasayfa(props) {
             </div>
           </div>
           <div className="card-3">
-            <img src="/assets/food-3.png" />
-            <h5>useEffect Tavuklu Burger</h5>
+            <img className="terminal" src="/assets/food-3.png" />
+            <h5 className="card-title">useEffect Tavuklu Burger</h5>
             <div className="food-inc">
               <p>4.9</p>
               <p>(200)</p>

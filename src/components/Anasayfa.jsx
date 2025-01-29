@@ -1,6 +1,7 @@
 import { toast } from "react-toastify";
 import "./Anasayfa.css";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+
 export default function Anasayfa(props) {
   const { secili, setSecili } = props;
   const history = useHistory();
@@ -23,17 +24,17 @@ export default function Anasayfa(props) {
       </div>
       <div className="all-page">
         <div className="header-icon">
-          <img src="/src/assets/1.svg" alt="" />
+          <img src="/assets/1.svg" alt="" />
           <p>YENİ! Kore</p>
-          <img src="/src/assets/2.svg" alt="" />
+          <img src="/assets/2.svg" alt="" />
           <p>Pizza</p>
-          <img src="/src/assets/3.svg" alt="" />
+          <img src="/assets/3.svg" alt="" />
           <p>Burger</p>
-          <img src="/src/assets/4.svg" alt="" />
+          <img src="/assets/4.svg" alt="" />
           <p>Kızartmalar</p>
-          <img src="/src/assets/5.svg" alt="" />
+          <img src="/assets/5.svg" alt="" />
           <p>Fast food</p>
-          <img src="/src/assets/6.svg" alt="" />
+          <img src="/assets/6.svg" alt="" />
           <p>Gazlı içecek</p>
         </div>
 
@@ -69,34 +70,34 @@ export default function Anasayfa(props) {
         </div>
         <div className="menü-bar-header">
           <button className="menü-bar">
-            <img src="/src/assets/1.svg" alt="" />
+            <img src="/assets/1.svg" alt="" />
             Ramen
           </button>
           <button className="menü-bar">
-            <img src="/src/assets/2.svg" alt="" />
+            <img src="/assets/2.svg" alt="" />
             Pizza
           </button>
           <button className="menü-bar">
-            <img src="/src/assets/3.svg" alt="" />
+            <img src="/assets/3.svg" alt="" />
             Burger
           </button>
           <button className="menü-bar">
-            <img src="/src/assets/4.svg" alt="" />
+            <img src="/assets/4.svg" alt="" />
             French fries
           </button>
           <button className="menü-bar">
-            <img src="/src/assets/5.svg" alt="" />
+            <img src="/assets/5.svg" alt="" />
             Fast food
           </button>
           <button className="menü-bar">
-            <img src="/src/assets/6.svg" alt="" />
+            <img src="/assets/6.svg" alt="" />
             Soft drinks
           </button>
         </div>
 
         <div className="cards">
           <div className="card-1">
-            <img src="/src/assets/food-1.png" />
+            <img src="/assets/food-1.png" />
             <h5>Terminal Pizza</h5>
             <div className="food-inc">
               <p>4.9</p>
@@ -106,7 +107,7 @@ export default function Anasayfa(props) {
           </div>
 
           <div className="card-2">
-            <img src="/src/assets/food-2.png" />
+            <img src="/assets/food-2.png" />
             <h5>Position Absolute Acı Pizza</h5>
             <div className="food-inc">
               <p>4.9</p>
@@ -115,7 +116,7 @@ export default function Anasayfa(props) {
             </div>
           </div>
           <div className="card-3">
-            <img src="/src/assets/food-3.png" />
+            <img src="/assets/food-3.png" />
             <h5>useEffect Tavuklu Burger</h5>
             <div className="food-inc">
               <p>4.9</p>

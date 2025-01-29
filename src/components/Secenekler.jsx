@@ -191,7 +191,7 @@ export default function Secenekler(props) {
     <form onSubmit={handleSubmit}>
       <div className="back-wrapper">
         <div className="siparis-alt">
-          <img src="/src/assets/form-banner.png" />
+          <img src="/assets/form-banner.png" />
           <nav className="nav-links">
             <Link
               to="/"
